@@ -1,0 +1,165 @@
+.main-container {
+    max-width:  980px;
+    margin:     0 auto;
+    padding:    50px 0;
+    text-align: center;
+}
+
+.main-container ul {
+    margin-top:            50px;
+    list-style:            none;
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:              30px;
+}
+@media screen and (max-width: 767px) {
+    .main-container ul {
+        padding: 0 5px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.main-container ul li {
+    display:                 flex;
+    flex-direction:          column;
+    border-top-left-radius:  15px;
+    border-top-right-radius: 15px;
+    overflow:                hidden;
+}
+
+.main-container ul li img {
+    flex:      1;
+    max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .main-container ul li img {
+        min-height: calc(100vw - 10px);
+    }
+}
+
+.main-container ul li footer {
+    flex:          1;
+    min-height:    132px;
+    border-bottom: 1px solid #e5e5e5;
+    border-left:   1px solid #e5e5e5;
+    border-right:  1px solid #e5e5e5;
+    padding:       15px 20px;
+    background:    #fff;
+    text-align:    left;
+}
+
+.main-container ul li footer strong {
+    font-size: 16px;
+    color:     #333;
+}
+
+.main-container ul li footer p {
+    font-size:   14px;
+    line-height: 20px;
+    color:       #999;
+    margin-top:  5px;
+}
+
+.main-container ul li .buttons {
+    display:               grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-container ul li .buttons button {
+    border-radius: 0;
+    border:        0;
+    outline:       0;
+    border-bottom: 1px solid #e5e5e5;
+    height:        50px;
+    cursor:        pointer;
+    background:    #fff;
+}
+.main-container ul li .buttons button:hover,
+.main-container ul li .buttons button:focus,
+.main-container ul li .buttons button:active {
+    border:     0;
+    outline:    0;
+    background: #e5e5e5;
+}
+.main-container ul li .buttons button:nth-child(odd) {
+    border-right:              0.5px solid #e5e5e5;
+    border-left:               1px solid #e5e5e5;
+    border-bottom-left-radius: 15px;
+    overflow:                  hidden; 
+}
+.main-container ul li .buttons button:nth-child(even) {
+    border-left:                0.5px solid #e5e5e5;
+    border-right:               1px solid #e5e5e5;
+    border-bottom-right-radius: 15px;
+    overflow:                   hidden; 
+}
+
+.main-container ul li .buttons button img {
+    opacity: 0.5;
+}
+.main-container ul li .buttons button:hover img,
+.main-container ul li .buttons button:focus img,
+.main-container ul li .buttons button:active img {
+    opacity: 1;
+}
+
+.main-container .empty {
+    font-size:   32px;
+    color:       #999;
+    font-weight: bold;
+    margin-top:  150px;
+}
+
+.match-container {
+    position:        fixed;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items:     center;
+    top:             0;
+    left:            0;
+    right:           0;
+    bottom:          0;
+    z-index:         999;
+    background:      rgba(0, 0, 0, 0.75);
+    color:           #f5f5f5;
+}
+
+.match-container .match-avatar {
+    height:        200px;
+    width:         200px;
+    margin:        30px 0;
+    overflow:      hidden;
+    border-radius: 50%;
+    border:        5px solid #f5f5f5;
+}
+
+.match-container strong {
+    font-size: 32px;
+}
+
+.match-container p {
+    margin-top:  10px;
+    font-size:   20px;
+    line-height: 30px;
+    max-width:   400px;
+    color:       rgba(255, 255, 255, 0.75);
+}
+
+.match-container button {
+    position:    absolute;
+    left:        8px;
+    top:         -2px;
+    background:  none;
+    border:      0;
+    outline:     0;
+    font-size:   60px;
+    font-weight: 100;
+    color:       rgba(255, 255, 255, 0.5);
+    cursor:      pointer;
+}
+.match-container button:hover,
+.match-container button:focus,
+.match-container button:active {
+    color: rgba(255, 255, 255, 1);
+}

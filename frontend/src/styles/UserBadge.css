@@ -1,0 +1,28 @@
+.user-badge-container {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    position:        fixed;
+    top:             8px;
+    right:           8px;
+    z-index:         99;
+    height:          42px;
+    box-shadow:      0 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius:   21px;
+    overflow:        hidden;
+    background:      #ec8e79;
+}
+
+.user-badge-container .user-badge-avatar {
+    margin-left:   10px;
+    max-height:    100%;
+    border-radius: 50%;
+    overflow:      hidden;
+}
+
+.user-badge-container .user-badge-name {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size:   13px;
+    color:       #fff;
+}
