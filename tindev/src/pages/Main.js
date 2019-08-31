@@ -119,7 +119,7 @@ class Main extends React.Component {
         this.handleLikeAction(itemIndex);
     }
 
-    async handleDislikeAction (itemIndex, reload) {
+    handleDislikeAction (itemIndex, reload) {
 
         const maxValue        = 1,
               minValue        = 0,
@@ -165,7 +165,7 @@ class Main extends React.Component {
         ]).start(() => this.handleDislikeAPI(itemIndex, reload));
     }
 
-    async handleLikeAction (itemIndex, reload) {
+    handleLikeAction (itemIndex, reload) {
 
         const maxValue        = 1,
               minValue        = 0,
