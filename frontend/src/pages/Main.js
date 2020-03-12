@@ -138,9 +138,11 @@ class Main extends React.Component {
                 <Link to="/">
                     <img src={logo} alt="Tindev" />
                 </Link>
-                <ul>{devs.length ? devCards : (
-                    <div className="empty">Acabou! :(</div>
-                )}</ul>
+                <ul>
+                    {devs.length ? devCards : (
+                        <div className="empty">Acabou! :(</div>
+                    )}
+                </ul>
                 {match && (
                     <div className="match-container">
                         <img className="match-logo" src={itsamatch} alt ="It's a Match!" />

@@ -1,23 +1,23 @@
-const express        = require('../node_modules/express'),
-      mongoose       = require('../node_modules/mongoose'),
-      cors           = require('../node_modules/cors'),
-      routes         = require('./routes'),
-      app            = express(),
-      server         = require('http').Server(app),
-      io             = require('../node_modules/socket.io')(server),
-	  Connection     = require('./models/Connection'),
-	  port           = 3001;
+const express    = require('../node_modules/express'),
+      mongoose   = require('../node_modules/mongoose'),
+      cors       = require('../node_modules/cors'),
+      routes     = require('./routes'),
+      app        = express(),
+      server     = require('http').Server(app),
+      io         = require('../node_modules/socket.io')(server),
+      Connection = require('./models/Connection'),
+      port       = 3001;
 
 
 
 mongoose.connect(
-    "mongodb+srv://db-manager:db-manager@cluster0-3di0n.mongodb.net/raniere-omnistack8?retryWrites=true&w=majority",
-    {
-    	useNewUrlParser:    true,
-    	useFindAndModify:   false,
+	"mongodb+srv://db-manager:db-manager@cluster0-3di0n.mongodb.net/raniere-omnistack8?retryWrites=true&w=majority",
+	{
+		useNewUrlParser:    true,
+		useFindAndModify:   false,
 		useCreateIndex:     true,
 		useUnifiedTopology: true,
-    }
+	}
 );
 
 
@@ -42,9 +42,9 @@ io.on('connection', socket => {
 	socket.on('bind_user', async user => {
 		console.log(`bind user ${user} to socket ${socket.id}`);
 		await Connection.findOneAndUpdate(
-			{userId:   user},       //query
-			{socketId: socket.id},  //operation ($set)
-			{upsert:   true}        //options
+			{userId:   user},      //query
+			{socketId: socket.id}, //operation ($set)
+			{upsert:   true}       //options
 		);
 	});
 });
