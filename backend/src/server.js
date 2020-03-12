@@ -13,9 +13,10 @@ const express        = require('../node_modules/express'),
 mongoose.connect(
     "mongodb+srv://db-manager:db-manager@cluster0-3di0n.mongodb.net/raniere-omnistack8?retryWrites=true&w=majority",
     {
-    	useNewUrlParser:  true,
-    	useFindAndModify: false,
-    	useCreateIndex:   true,
+    	useNewUrlParser:    true,
+    	useFindAndModify:   false,
+		useCreateIndex:     true,
+		useUnifiedTopology: true,
     }
 );
 
