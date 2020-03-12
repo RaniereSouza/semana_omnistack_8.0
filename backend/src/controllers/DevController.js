@@ -61,7 +61,7 @@ module.exports = {
 
             const { name, bio, avatar_url: avatar } = response.data;
             dev = await Dev.create({
-                name,
+                name: name ? name : githubUsername,
                 githubUsername,
                 bio,
                 avatar
